@@ -1,8 +1,12 @@
 import React from 'react';
+import { Background, Box } from '../../dist/styles/QA.jsx';
 
 function QA() {
   return (
-    <div>QA</div>
+    <Background>
+      <Box>questions</Box>
+      <Box>answers</Box>
+    </Background>
   );
 }
 
