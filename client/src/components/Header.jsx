@@ -1,5 +1,8 @@
+/* eslint-disable import/extensions */
 import React from 'react';
-import { NavBar, Logo, Menu, Contact } from '../../dist/styles/Header.jsx';
+import {
+  NavBar, Logo, Menu, Contact,
+} from '../../dist/styles/Header.jsx';
 
 function Header() {
   return (

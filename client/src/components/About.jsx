@@ -1,8 +1,12 @@
 import React from 'react';
+import { Background } from '../../dist/styles/About.jsx';
 
 function About() {
   return (
-    <div>About</div>
+    <Background>
+      <span>welcome / short description</span>
+      <span>get a quote</span>
+    </Background>
   );
 }
 
