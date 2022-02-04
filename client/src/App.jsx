@@ -1,5 +1,6 @@
 /* eslint-disable import/extensions */
 import React from 'react';
+import { Wrapper } from '../dist/Styles.jsx';
 import Header from './components/Header.jsx';
 import About from './components/About.jsx';
 import Services from './components/Services.jsx';
@@ -11,7 +12,7 @@ import Footer from './components/Footer.jsx';
 
 function App() {
   return (
-    <div>
+    <Wrapper>
       <Header />
       <About />
       <Services />
@@ -20,7 +21,7 @@ function App() {
       <PhotoGallery />
       <Register />
       <Footer />
-    </div>
+    </Wrapper>
   );
 }
 
