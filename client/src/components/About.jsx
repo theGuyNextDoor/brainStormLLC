@@ -6,12 +6,10 @@ const Background = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: right;
-  width: 100vw;
   height: 100vh;
   background-image: url('https://image.shutterstock.com/image-photo/abstract-city-building-skyline-metropolitan-260nw-1622580361.jpg');
   background-size: cover;
-  border-bottom: solid;
-  margin-bottom: 2em;
+  padding-right: 10%;
 `;
 
 function About() {
