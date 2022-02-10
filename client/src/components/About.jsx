@@ -14,7 +14,7 @@ const Background = styled.div`
 
 function About() {
   return (
-    <Background>
+    <Background id="about">
       <span>welcome / short description</span>
       <span>get a quote</span>
     </Background>

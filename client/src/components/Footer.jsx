@@ -33,7 +33,7 @@ const Image = styled.img`
 
 function Footer() {
   return (
-    <Container>
+    <Container id="contact">
       <Logo>
         <img src="" alt="Logo" />
         <span>Additional text</span>

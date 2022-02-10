@@ -59,7 +59,7 @@ function QA() {
     )
   });
   return (
-    <Background>
+    <Background id="questions">
       <Box>
         <Text>questions</Text>
         {questions}

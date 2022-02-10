@@ -40,7 +40,7 @@ function Services() {
   });
 
   return (
-    <ColContainer>
+    <ColContainer id="services">
       <Title>why choose us?</Title>
       <SvcContainer>
         {svc}

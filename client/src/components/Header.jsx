@@ -1,5 +1,7 @@
 /* eslint-disable import/extensions */
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 // import logo from '../../dist/Logo.png';
 
@@ -33,21 +35,26 @@ const Contact = styled.div`
 
 function Header() {
   return (
-    <NavBar>
-      <Logo>
-        <img src="https://files.slack.com/files-pri/T02RU5518NT-F0328P0BK8A/20085_phillip_tsang_jt_1-01.jpg" alt="Logo" />
-      </Logo>
-      <Menu>
-        <span><a href="#about">about</a></span>
-        <span>services</span>
-        <span>projects</span>
-        <span><a href="#contact">contact</a></span>
-      </Menu>
-      <Contact>
-        <span>email: fakeemail@company.com</span>
-        <span>phone: (415) 666-6666</span>
-      </Contact>
-    </NavBar>
+    <BrowserRouter>
+      <NavBar>
+        <Logo>
+          <img src="https://files.slack.com/files-pri/T02RU5518NT-F0328P0BK8A/20085_phillip_tsang_jt_1-01.jpg" alt="Logo" />
+        </Logo>
+        <Menu>
+          <Link to="#about" smooth style={{ textDecoration: 'none', color: '#39C5FE' }}>
+            about
+          </Link>
+          <Link to="#services" smooth style={{ textDecoration: 'none', color: '#39C5FE' }}>services</Link>
+          <Link to="#projects" smooth style={{ textDecoration: 'none', color: '#39C5FE' }}>projects</Link>
+          <Link to="#contact" smooth style={{ textDecoration: 'none', color: '#39C5FE' }}>contact</Link>
+
+        </Menu>
+        <Contact>
+          <span>email: fakeemail@company.com</span>
+          <span>phone: (415) 666-6666</span>
+        </Contact>
+      </NavBar>
+    </BrowserRouter>
   );
 }
 

@@ -64,7 +64,7 @@ function Projects() {
   }
 
   return (
-    <RowContainer>
+    <RowContainer id="projects">
       <ListBox>
         {projects}
       </ListBox>

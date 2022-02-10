@@ -29,10 +29,10 @@ function App() {
     <Wrapper>
       <Header />
       <Container>
-        <About id="about" />
-        <Services id="services" />
-        <QA id="questions" />
-        <Projects id="projects" />
+        <About />
+        <Services />
+        <QA />
+        <Projects />
         <PhotoGallery id="photos" />
         <Register id="register" />
       </Container>
