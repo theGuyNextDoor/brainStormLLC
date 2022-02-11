@@ -6,6 +6,7 @@ export const ColContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 35vh;
+  margin-bottom: 5vh;
 `;
 
 export const RowContainer = styled.div`
@@ -14,6 +15,7 @@ export const RowContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 35vh;
+  margin-bottom: 5vh;
 `;
 
 export const Title = styled.div`

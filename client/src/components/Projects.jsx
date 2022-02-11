@@ -37,7 +37,7 @@ const imgData = [
 function Projects() {
   const [currentProjectImage, setCurrentProjectImage] = useState(0);
 
-  const projects = projectData.map((item, index) => <Text style={{ color: currentProjectImage === index && '#D22FFF' }} key={index}>{item}</Text>);
+  const projects = projectData.map((item, index) => <Text style={{ color: currentProjectImage === index && '#39C5FE' }} key={index}>{item}</Text>);
 
   const images = imgData.map((item, index) => {
     const { name, url } = item;

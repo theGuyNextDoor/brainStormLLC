@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import logo from '../../dist/logo.png';
 
 const Container = styled.div`
   width: 99vw;
@@ -35,7 +36,7 @@ function Footer() {
   return (
     <Container id="contact">
       <Logo>
-        <img src="" alt="Logo" />
+        <Image src={logo} alt="Logo" />
         <span>Additional text</span>
       </Logo>
       <Contact>

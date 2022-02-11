@@ -10,6 +10,7 @@ const Background = styled.div`
   height: 35vh;
   background-image: url('https://image.shutterstock.com/image-photo/abstract-city-building-skyline-metropolitan-260nw-1622580361.jpg');
   background-size: cover;
+  margin-bottom: 5vh;
 `;
 const Box = styled.div`
   display: flex;
@@ -24,13 +25,9 @@ const Item = styled.div`
   height: 15%;
   padding-left: 2%;
   align-items: center;
-  /* background-color: #0C0A22; */
-  /* border: thick double #D22FFF; */
-  /* color: #39C5FE; */
-  background-color: #39C5FE;
-  border: thick double #0C0A22;
-  color: #0C0A22;
-  /* justify-content: center; */
+  background-color: #0C0A22;
+  border: thick double #39C5FE;
+  color: #F3F3F3;
 `;
 
 const questionsData = [

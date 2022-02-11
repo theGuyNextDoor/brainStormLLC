@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
-// import logo from '../../dist/Logo.png';
+import logo from '../../dist/logo.png';
 
 const NavBar = styled.header`
   display: flex;
@@ -18,12 +18,18 @@ const Logo = styled.div`
   flex: 1;
   padding-left: 2%;
 `;
+
 const Menu = styled.div`
   /* position: fixed; // Here */
   flex: 2;
   display: flex;
   justify-content: space-evenly;
 `;
+const Image = styled.img`
+  width: 5vh;
+  height: 4vh;
+`;
+
 const Contact = styled.div`
   flex: 1;
   display: flex;
@@ -38,7 +44,7 @@ function Header() {
     <BrowserRouter>
       <NavBar>
         <Logo>
-          <img src="https://files.slack.com/files-pri/T02RU5518NT-F0328P0BK8A/20085_phillip_tsang_jt_1-01.jpg" alt="Logo" />
+          <Image src={logo} alt="Logo" />
         </Logo>
         <Menu>
           <Link to="#about" smooth style={{ textDecoration: 'none', color: '#39C5FE' }}>
