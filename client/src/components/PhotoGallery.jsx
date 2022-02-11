@@ -62,6 +62,8 @@ function PhotoGallery() {
   });
 
   return (
+    // <div>
+    //   <span>images</span>
     <RowContainer>
       <FeatureImg src={featured.url} alt={featured.name} onClick={() => makeFeaturedImage(item)} />
       <ImagesContainer>
@@ -73,6 +75,7 @@ function PhotoGallery() {
         </ImagesRow>
       </ImagesContainer>
     </RowContainer>
+    // </div>
   );
 }
 
