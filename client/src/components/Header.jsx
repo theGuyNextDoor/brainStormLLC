@@ -13,7 +13,7 @@ function Header() {
           <Box component="img" sx={{ width: 50, height: 50, paddingLeft: 5 }} src={logo} alt="Logo" />
         </Grid>
 
-        <Grid item container xs={6} alignItems="center" justifyContent="space-between">
+        <Grid item container xs={6} alignItems="center" justifyContent="space-around">
           <Link to="#about" smooth style={{ textDecoration: 'none', color: '#FFF' }}>
             <Typography>About</Typography>
           </Link>
@@ -31,7 +31,7 @@ function Header() {
           </Link>
         </Grid>
 
-        <Grid item container xs={3} sx={{ paddingLeft: 5 }}>
+        <Grid item container xs={3}>
           <Typography>Email: phillip@philltsanggroup.co</Typography>
           <Typography>Phone: (408) 320-8628</Typography>
         </Grid>

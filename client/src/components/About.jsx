@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Box, Typography } from '@mui/material';
 
 const Background = styled.div`
   display: flex;
@@ -8,7 +9,7 @@ const Background = styled.div`
   text-align: right;
   height: 100vh;
   width: 100vw;
-  background-image: url('/background-1.jpg');
+  background-image: url('/background.jpg');
   background-size: cover;
   padding-right: 10%;
   margin-bottom: 5vh;
@@ -20,9 +21,23 @@ const Text = styled.span`
 
 function About() {
   return (
-    <Background id="about">
-      <Text>welcome / short description</Text>
-    </Background>
+    <Box
+      component="div"
+      id="about"
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        textAlign: 'right',
+        height: '100vh',
+        backgroundImage: "url('/background.jpg')",
+        backgroundSize: 'cover',
+        paddingRight: '10%',
+        marginottom: '5vh',
+      }}
+    >
+      <Typography sx={{ textShadow: '0 0 3px #39C5FE, 0 0 5px #FFF' }}>welcome / short description</Typography>
+    </Box>
   );
 }
 
