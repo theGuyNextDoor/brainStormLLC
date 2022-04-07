@@ -41,8 +41,8 @@ function Footer() {
       </Logo>
       <Contact>
         <span>Company name</span>
-        <span>email: fakeemail@company.com</span>
-        <span>phone: (415) 666-6666</span>
+        <span>email: phillip@philltsanggroup.co</span>
+        <span>phone: (408) 320-8628</span>
         <Socials>
           <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/800px-Instagram_logo_2016.svg.png" alt="instagram" />
           <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png" alt="facebook" />

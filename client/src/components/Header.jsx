@@ -10,7 +10,7 @@ const NavBar = styled.header`
   align-items: center;
   position: fixed;
   height: 5vh;
-  width: 99vw;
+  width: 100vw;
   background-color: #0C0A22;
   color: #39C5fE;
 `;
@@ -47,17 +47,17 @@ function Header() {
           <Image src={logo} alt="Logo" />
         </Logo>
         <Menu>
-          <Link to="#about" smooth style={{ textDecoration: 'none', color: '#39C5FE' }}>
-            about
+          <Link to="#about" smooth style={{ textDecoration: 'none', textTransform: 'none', color: '#FFF' }}>
+            About
           </Link>
-          <Link to="#services" smooth style={{ textDecoration: 'none', color: '#39C5FE' }}>services</Link>
-          <Link to="#projects" smooth style={{ textDecoration: 'none', color: '#39C5FE' }}>projects</Link>
-          <Link to="#contact" smooth style={{ textDecoration: 'none', color: '#39C5FE' }}>contact</Link>
+          <Link to="#services" smooth style={{ textDecoration: 'none', textTransform: 'none', color: '#FFF' }}>Services</Link>
+          <Link to="#projects" smooth style={{ textDecoration: 'none', textTransform: 'none', color: '#FFF' }}>Projects</Link>
+          <Link to="#contact" smooth style={{ textDecoration: 'none', textTransform: 'none', color: '#FFF' }}>Contact</Link>
 
         </Menu>
         <Contact>
-          <span>email: fakeemail@company.com</span>
-          <span>phone: (415) 666-6666</span>
+          <span style={{ textTransform: 'none', color: '#FFF' }}>Email: phillip@philltsanggroup.co</span>
+          <span style={{ textTransform: 'none', color: '#FFF' }}>Phone: (408) 320-8628</span>
         </Contact>
       </NavBar>
     </BrowserRouter>

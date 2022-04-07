@@ -15,25 +15,19 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   text-transform: uppercase;
-  /* color: #39C5FE; */
   color: #0C0A22;
 `;
-const Container = styled.div`
-  width: 80vw;
-  `;
 
 function App() {
   return (
     <Wrapper>
       <Header />
-      <Container>
-        <About />
-        <Services />
-        <QA />
-        <Projects />
-        <PhotoGallery id="photos" />
-        <Register id="register" />
-      </Container>
+      <About />
+      <Services />
+      <QA />
+      <Projects />
+      <PhotoGallery id="photos" />
+      <Register id="register" />
       <Footer id="contact" />
     </Wrapper>
   );

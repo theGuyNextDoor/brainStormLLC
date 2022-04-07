@@ -62,9 +62,7 @@ function PhotoGallery() {
   });
 
   return (
-    // <div>
-    //   <span>images</span>
-    <RowContainer>
+    <RowContainer style={{ backgroundColor: '#0C0A22', width: '100vw' }}>
       <FeatureImg src={featured.url} alt={featured.name} onClick={() => makeFeaturedImage(item)} />
       <ImagesContainer>
         <ImagesRow>
@@ -75,7 +73,6 @@ function PhotoGallery() {
         </ImagesRow>
       </ImagesContainer>
     </RowContainer>
-    // </div>
   );
 }
 

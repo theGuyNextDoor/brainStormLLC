@@ -8,7 +8,9 @@ const Background = styled.div`
   justify-content: space-evenly;
   align-items: center;
   height: 35vh;
-  background-image: url('https://image.shutterstock.com/image-photo/abstract-city-building-skyline-metropolitan-260nw-1622580361.jpg');
+  width: 100%;
+  background-image: url('/background-2.png');
+  background-position: center;
   background-size: cover;
   margin-bottom: 5vh;
 `;
@@ -26,7 +28,7 @@ const Item = styled.div`
   padding-left: 2%;
   align-items: center;
   background-color: #0C0A22;
-  border: thick double #39C5FE;
+  border: thick double #F3F3F3;
   color: #F3F3F3;
 `;
 
@@ -34,13 +36,13 @@ const questionsData = [
   'this is a dummy question 1?',
   'this is a dummy question 2?',
   'this is a dummy question 3?',
-  'this is a dummy question 4?',
+  // 'this is a dummy question 4?',
 ];
 const answersData = [
   'this is a dummy answer question 1',
   'this is a dummy answer question 2',
   'this is a dummy answer question 3',
-  'this is a dummy answer question 4',
+  // 'this is a dummy answer question 4',
 ];
 
 function QA() {
