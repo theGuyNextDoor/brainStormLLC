@@ -3,11 +3,11 @@ import { Grid, Box, Typography } from '@mui/material';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import logo from '../../dist/logo.png';
+import logo from '../../dist/images/logo.png';
 
 function Footer() {
   return (
-    <Grid id="contact" container sx={{ padding: 2 }}>
+    <Grid id="contact" container color="#FFF" backgroundColor="#0C0A22" sx={{ padding: 2 }}>
 
       <Grid item xs={8}>
         <Box component="img" src={logo} alt="Logo" sx={{ width: 100, height: 100 }} />

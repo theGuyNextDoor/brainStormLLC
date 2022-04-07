@@ -1,67 +1,97 @@
-import React, { useState } from 'react';
-import { Grid, Box } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Grid, Box, Typography } from '@mui/material';
+import renovation1 from '../../dist/images/renovation1.jpg';
+import renovation2 from '../../dist/images/renovation2.jpg';
+import renovation3 from '../../dist/images/renovation3.jpg';
+import renovation4 from '../../dist/images/renovation4.jpg';
 
-const dataTop = [
-  { name: 'image 1', url: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' },
-  { name: 'image 3', url: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80' },
-  { name: 'image 5', url: 'https://media.istockphoto.com/photos/home-tax-deduction-picture-id1270111816?b=1&k=20&m=1270111816&s=170667a&w=0&h=r15RKKh8GsUCFjX2FvrVmx4CYrk5fiAwSlfAmcwPoUw=' },
+import instillation1 from '../../dist/images/instillation1.jpg';
+import instillation2 from '../../dist/images/instillation2.jpg';
+import instillation3 from '../../dist/images/instillation3.jpg';
+import instillation4 from '../../dist/images/instillation4.jpg';
+import instillation5 from '../../dist/images/instillation5.jpg';
+import instillation6 from '../../dist/images/instillation6.jpg';
+
+const renovationData = [
+  { name: 'image 1', img: renovation1 },
+  { name: 'image 2', img: renovation2 },
+  { name: 'image 3', img: renovation3 },
+  { name: 'image 4', img: renovation4 },
 ];
-const dataBottom = [
-  { name: 'image 2', url: 'https://media.istockphoto.com/photos/business-holding-virtual-infographic-house-on-hand-real-estate-picture-id1285102341?b=1&k=20&m=1285102341&s=170667a&w=0&h=CGJMo0rj4hIozhB2ismCeNlt_pxda5t1yBA1EkwSANw=' },
-  { name: 'image 4', url: 'https://www.pewresearch.org/wp-content/uploads/2021/08/FT_21.08.17_BigHousesSmallHouses_feature.jpg' },
-  { name: 'image 6', url: 'https://static.dezeen.com/uploads/2020/02/house-in-the-landscape-niko-arcjitect-architecture-residential-russia-houses-khurtin_dezeen_2364_hero.jpg' },
+
+const instillationData = [
+  { name: 'image 1', img: instillation1 },
+  { name: 'image 2', img: instillation2 },
+  { name: 'image 3', img: instillation3 },
+  { name: 'image 4', img: instillation4 },
+  { name: 'image 5', img: instillation5 },
+  { name: 'image 6', img: instillation6 },
 ];
 
-function PhotoGallery() {
-  const [featured, setFeatured] = useState({ url: dataTop[0].url, name: dataTop[0].name });
+function PhotoGallery({ title }) {
+  const [featured, setFeatured] = useState({});
 
-  function makeFeaturedImage(url, name) {
-    setFeatured({ url, name });
+  function makeFeaturedImage(img, name) {
+    setFeatured({ img, name });
   }
 
-  const imagesTop = dataTop.map((item, index) => {
-    const { name, url } = item;
+  const renovation = renovationData.map((item, index) => {
+    const { name, img } = item;
     return (
       <Grid
         key={index}
         item
         component="img"
-        src={url} alt={name}
-        onClick={() => makeFeaturedImage(url, name)}
+        src={img} alt={name}
+        onClick={() => makeFeaturedImage(img, name)}
         sx={{ height: '90%', width: '25%' }}
       />
     );
   });
 
-  const imagesBottom = dataBottom.map((item, index) => {
-    const { name, url } = item;
+  const instillation = instillationData.map((item, index) => {
+    const { name, img } = item;
     return (
       <Grid
         key={index}
         item
+        xs={3}
         component="img"
-        src={url} alt={name}
-        onClick={() => makeFeaturedImage(url, name)}
+        src={img} alt={name}
+        onClick={() => makeFeaturedImage(img, name)}
         sx={{ height: '90%', width: '25%' }}
       />
     );
   });
+
+  useEffect(() => {
+    if (title === 'Renovation') {
+      setFeatured({ img: renovation[0].img, name: renovation[0].name });
+    }
+    if (title === 'Instillation') {
+      setFeatured({ img: instillation[0].img, name: instillation[0].name });
+    }
+  }, [title]);
 
   return (
     <Grid
       container
       alignItems="center"
       justifyContent="space-around"
-      backgroundColor="#0C0A22"
       sx={{ height: 300, padding: 2 }}
     >
-      <Box
-        component="img"
-        src={featured.url}
-        alt={featured.name}
-        onClick={() => makeFeaturedImage(item)}
-        sx={{ height: '100%', width: '30%' }}
-      />
+      {featured.img ? (
+        <Box
+          component="img"
+          src={featured.img}
+          alt={featured.name}
+          sx={{ height: '100%', width: '30%' }}
+        />
+      ) : (
+        <Box sx={{ display: 'flex', justifyContent: 'center', height: '100%', width: '30%' }}>
+          <Typography>Select an image</Typography>
+        </Box>
+      )}
 
       <Box
         sx={{
@@ -71,11 +101,9 @@ function PhotoGallery() {
           height: '100%',
         }}
       >
-        <Grid container justifyContent="space-between" sx={{ height: '50%' }}>
-          {imagesTop}
-        </Grid>
-        <Grid container justifyContent="space-between" alignItems="flex-end" sx={{ height: '50%' }}>
-          {imagesBottom}
+        <Grid container sx={{ height: '50%' }}>
+          {title === 'Renovation' && renovation}
+          {title === 'Instillation' && instillation}
         </Grid>
       </Box>
     </Grid>

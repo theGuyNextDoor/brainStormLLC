@@ -2,12 +2,12 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import { Grid, Box, Typography } from '@mui/material';
-import logo from '../../dist/logo.png';
+import logo from '../../dist/images/logo.png';
 
 function Header() {
   return (
     <BrowserRouter>
-      <Grid container backgroundColor="#0C0A22" color="#FFF" sx={{ position: 'fixed' }}>
+      <Grid container backgroundColor="#0C0A22" color="#FFF" sx={{ position: 'fixed', padding: 1 }}>
 
         <Grid item container xs={3} alignItems="center">
           <Box component="img" sx={{ width: 50, height: 50, paddingLeft: 5 }} src={logo} alt="Logo" />

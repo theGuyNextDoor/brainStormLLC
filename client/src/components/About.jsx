@@ -8,14 +8,14 @@ function About() {
       id="about"
       sx={{
         display: 'flex',
-        alignItems: 'center',
+        // alignItems: 'center',
         height: '100vh',
-        backgroundImage: "url('/background.jpg')",
+        backgroundImage: "url('images//background.jpg')",
         backgroundSize: 'cover',
         paddingLeft: '10%',
       }}
     >
-      <Box sx={{ width: '50%', color: '#FFF', textShadow: '0 0 20px #000, 0 0 40px #000' }}>
+      <Box sx={{ width: '50%', color: '#000', textShadow: '0 0 20px #FFF, 0 0 40px #FFF', paddingTop: '10%' }}>
         <Typography>
           Hi, Im Phillip, and I am a Real Estate Investor and Property Manager in the San
           Francisco and San Mateo county area. I majored in Business Economics at UCSB,

@@ -56,7 +56,7 @@ function QA() {
         padding: 2,
         height: 300,
         color: '#FFF',
-        backgroundImage: "url('/background_2.png')",
+        backgroundImage: "url('/images/background_2.png')",
         backgroundSize: 'cover',
       }}
     >
