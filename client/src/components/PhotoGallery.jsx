@@ -1,29 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { RowContainer } from '../../dist/Styles.jsx';
-
-const FeatureImg = styled.img`
-  height: 90%;
-  width: 30%;
-`;
-const ImagesContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 90%;
-  width: 50%;
-`;
-const ImagesRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  height: 40%;
-  width: 100%;
-`;
-
-const SmallImg = styled.img`
-  height: 100%;
-  width: 100%;
-`;
+import React, { useState } from 'react';
+import { Grid, Box } from '@mui/material';
 
 const dataTop = [
   { name: 'image 1', url: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' },
@@ -46,36 +22,63 @@ function PhotoGallery() {
   const imagesTop = dataTop.map((item, index) => {
     const { name, url } = item;
     return (
-      <div key={index}>
-        <SmallImg src={url} alt={name} onClick={() => makeFeaturedImage(url, name)} />
-      </div>
+      <Grid
+        key={index}
+        item
+        component="img"
+        src={url} alt={name}
+        onClick={() => makeFeaturedImage(url, name)}
+        sx={{ height: '90%', width: '25%' }}
+      />
     );
   });
 
   const imagesBottom = dataBottom.map((item, index) => {
     const { name, url } = item;
     return (
-      <div key={index}>
-        <SmallImg src={url} alt={name} onClick={() => makeFeaturedImage(url, name)} />
-      </div>
+      <Grid
+        key={index}
+        item
+        component="img"
+        src={url} alt={name}
+        onClick={() => makeFeaturedImage(url, name)}
+        sx={{ height: '90%', width: '25%' }}
+      />
     );
   });
 
   return (
-    // <div>
-    //   <span>images</span>
-    <RowContainer>
-      <FeatureImg src={featured.url} alt={featured.name} onClick={() => makeFeaturedImage(item)} />
-      <ImagesContainer>
-        <ImagesRow>
+    <Grid
+      container
+      alignItems="center"
+      justifyContent="space-around"
+      backgroundColor="#0C0A22"
+      sx={{ height: 300, padding: 2 }}
+    >
+      <Box
+        component="img"
+        src={featured.url}
+        alt={featured.name}
+        onClick={() => makeFeaturedImage(item)}
+        sx={{ height: '100%', width: '30%' }}
+      />
+
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          width: '50%',
+          height: '100%',
+        }}
+      >
+        <Grid container justifyContent="space-between" sx={{ height: '50%' }}>
           {imagesTop}
-        </ImagesRow>
-        <ImagesRow>
+        </Grid>
+        <Grid container justifyContent="space-between" alignItems="flex-end" sx={{ height: '50%' }}>
           {imagesBottom}
-        </ImagesRow>
-      </ImagesContainer>
-    </RowContainer>
-    // </div>
+        </Grid>
+      </Box>
+    </Grid>
   );
 }
 

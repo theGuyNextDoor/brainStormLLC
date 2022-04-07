@@ -2,31 +2,6 @@ import React, { useState } from 'react';
 import { Grid, Box, Typography } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import styled from 'styled-components';
-import { RowContainer, Text } from '../../dist/Styles.jsx';
-
-const ListBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 20%;
-  height: 70%;
-`;
-const ImageCarousel = styled.div`
-display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 40%;
-  height: 70%;
-`;
-const CurrentImageBox = styled.div`
-  width: 80%;
-  height: 100%;
-`;
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-`;
 
 const projectData = ['Project name 1', 'Project name 2', 'Project name 3'];
 const imgData = [
@@ -77,7 +52,7 @@ function Projects() {
         {projects}
       </Grid>
 
-      <Grid item container alignItems="center" justifyContent="center" justifyContent="center" xs={4}>
+      <Grid item container alignItems="center" justifyContent="center" xs={4}>
         <ArrowBackIosNewIcon onClick={prevProject} />
         {images[currentProjectImage]}
         <ArrowForwardIosIcon onClick={nextProject} />
