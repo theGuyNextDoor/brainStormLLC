@@ -18,9 +18,9 @@ function App() {
       <Services />
       <QA />
       <Projects />
-      <PhotoGallery id="photos" />
-      <Register id="register" />
-      <Footer id="contact" />
+      <PhotoGallery />
+      <Register />
+      <Footer />
     </Grid>
   );
 }
