@@ -7,17 +7,21 @@ const Background = styled.div`
   justify-content: center;
   text-align: right;
   height: 100vh;
-  background-image: url('https://image.shutterstock.com/image-photo/abstract-city-building-skyline-metropolitan-260nw-1622580361.jpg');
+  width: 100vw;
+  background-image: url('/background-1.jpg');
   background-size: cover;
   padding-right: 10%;
   margin-bottom: 5vh;
+`;
+const Text = styled.span`
+  text-shadow: 0 0 3px #39C5FE, 0 0 5px #FFF;
+  /* color: #39C5FE; */
 `;
 
 function About() {
   return (
     <Background id="about">
-      <span>welcome / short description</span>
-      <span>get a quote</span>
+      <Text>welcome / short description</Text>
     </Background>
   );
 }

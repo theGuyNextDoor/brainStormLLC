@@ -1,65 +1,41 @@
-/* eslint-disable import/extensions */
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
-import styled from 'styled-components';
+import { Grid, Box, Typography } from '@mui/material';
 import logo from '../../dist/logo.png';
-
-const NavBar = styled.header`
-  display: flex;
-  align-items: center;
-  position: fixed;
-  height: 5vh;
-  width: 99vw;
-  background-color: #0C0A22;
-  color: #39C5fE;
-`;
-const Logo = styled.div`
-  flex: 1;
-  padding-left: 2%;
-`;
-
-const Menu = styled.div`
-  /* position: fixed; // Here */
-  flex: 2;
-  display: flex;
-  justify-content: space-evenly;
-`;
-const Image = styled.img`
-  width: 5vh;
-  height: 4vh;
-`;
-
-const Contact = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  /* text-align: center; */
-  text-align: right;
-  padding-right: 2%;
-`;
 
 function Header() {
   return (
     <BrowserRouter>
-      <NavBar>
-        <Logo>
-          <Image src={logo} alt="Logo" />
-        </Logo>
-        <Menu>
-          <Link to="#about" smooth style={{ textDecoration: 'none', color: '#39C5FE' }}>
-            about
-          </Link>
-          <Link to="#services" smooth style={{ textDecoration: 'none', color: '#39C5FE' }}>services</Link>
-          <Link to="#projects" smooth style={{ textDecoration: 'none', color: '#39C5FE' }}>projects</Link>
-          <Link to="#contact" smooth style={{ textDecoration: 'none', color: '#39C5FE' }}>contact</Link>
+      <Grid container backgroundColor="#0C0A22" color="#FFF" sx={{ position: 'fixed' }}>
 
-        </Menu>
-        <Contact>
-          <span>email: fakeemail@company.com</span>
-          <span>phone: (415) 666-6666</span>
-        </Contact>
-      </NavBar>
+        <Grid item container xs={3} alignItems="center">
+          <Box component="img" sx={{ width: 50, height: 50, paddingLeft: 5 }} src={logo} alt="Logo" />
+        </Grid>
+
+        <Grid item container xs={6} alignItems="center" justifyContent="space-between">
+          <Link to="#about" smooth style={{ textDecoration: 'none', color: '#FFF' }}>
+            <Typography>About</Typography>
+          </Link>
+
+          <Link to="#services" smooth style={{ textDecoration: 'none', color: '#FFF' }}>
+            <Typography>Services</Typography>
+          </Link>
+
+          <Link to="#projects" smooth style={{ textDecoration: 'none', color: '#FFF' }}>
+            <Typography>Projects</Typography>
+          </Link>
+
+          <Link to="#contact" smooth style={{ textDecoration: 'none', color: '#FFF' }}>
+            <Typography>Contact</Typography>
+          </Link>
+        </Grid>
+
+        <Grid item container xs={3} sx={{ paddingLeft: 5 }}>
+          <Typography>Email: phillip@philltsanggroup.co</Typography>
+          <Typography>Phone: (408) 320-8628</Typography>
+        </Grid>
+      </Grid>
     </BrowserRouter>
   );
 }
