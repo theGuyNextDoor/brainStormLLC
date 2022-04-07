@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { Grid, Box, Typography } from '@mui/material';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import styled from 'styled-components';
 import { RowContainer, Text } from '../../dist/Styles.jsx';
 
@@ -8,8 +11,6 @@ const ListBox = styled.div`
   justify-content: space-around;
   width: 20%;
   height: 70%;
-
-  /* border: solid; */
 `;
 const ImageCarousel = styled.div`
 display: flex;
@@ -37,14 +38,20 @@ const imgData = [
 function Projects() {
   const [currentProjectImage, setCurrentProjectImage] = useState(0);
 
-  const projects = projectData.map((item, index) => <Text style={{ color: currentProjectImage === index && '#39C5FE' }} key={index}>{item}</Text>);
+  const projects = projectData.map((item, index) => (
+    <Typography
+      key={index}
+      variant="h5"
+      sx={{ color: currentProjectImage === index && '#39C5FE' }}
+    >
+      {item}
+    </Typography>
+  ));
 
   const images = imgData.map((item, index) => {
     const { name, url } = item;
     return (
-      <CurrentImageBox>
-        <Image key={index} src={url} alt={name} />
-      </CurrentImageBox>
+      <Box component="img" key={index} src={url} alt={name} sx={{ width: '80%', height: '80%' }} />
     );
   });
 
@@ -64,16 +71,19 @@ function Projects() {
   }
 
   return (
-    <RowContainer id="projects">
-      <ListBox>
+    <Grid id="projects" container justifyContent="center" alignItems="center" sx={{ height: 300, padding: 2 }}>
+
+      <Grid item xs={4} container direction="column" alignItems="center">
         {projects}
-      </ListBox>
-      <ImageCarousel>
-        <span onClick={prevProject}>&lt;</span>
+      </Grid>
+
+      <Grid item container alignItems="center" justifyContent="center" justifyContent="center" xs={4}>
+        <ArrowBackIosNewIcon onClick={prevProject} />
         {images[currentProjectImage]}
-        <span onClick={nextProject}>&gt;</span>
-      </ImageCarousel>
-    </RowContainer>
+        <ArrowForwardIosIcon onClick={nextProject} />
+      </Grid>
+
+    </Grid>
   );
 }
 
