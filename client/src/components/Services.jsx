@@ -1,7 +1,6 @@
 /* eslint-disable import/extensions */
 import React from 'react';
-import styled from 'styled-components';
-import { ColContainer, Title, Text } from '../../dist/Styles.jsx';
+import { Grid, Box, Typography } from '@mui/material';
 
 const data = [
   { name: 'service 1', image: 'https://media.istockphoto.com/photos/home-tax-deduction-picture-id1270111816?b=1&k=20&m=1270111816&s=170667a&w=0&h=r15RKKh8GsUCFjX2FvrVmx4CYrk5fiAwSlfAmcwPoUw=' },
@@ -10,43 +9,33 @@ const data = [
   { name: 'service 4', image: 'https://www.pewresearch.org/wp-content/uploads/2021/08/FT_21.08.17_BigHousesSmallHouses_feature.jpg' },
 ];
 
-const SvcContainer = styled.div`
-  flex: 3;
-  display: flex;
-  justify-content: space-between;
-`;
-const SvcBox = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-`;
-const Img = styled.img`
-  width: 50%;
-  height: 50%;
-  border-radius: 50%;
-`;
-
 function Services() {
   const svc = data.map((item, index) => {
     const { name, image } = item;
     return (
-      <SvcBox key={index}>
-        <Img src={image} alt="service info" />
-        <Text>{name}</Text>
-      </SvcBox>
+      // <Grid key={index} item border="solid">
+      <Grid key={index} item xs={3} container direction="column" alignItems="center">
+        <Box component="img" src={image} alt="service info" sx={{ width: 150, height: 150, borderRadius: 50 }} />
+        <Typography>{name}</Typography>
+      </Grid>
     );
   });
 
   return (
-    <ColContainer id="services">
-      <Title>why choose us?</Title>
-      <SvcContainer>
+    <Grid
+      id="services"
+      container
+      direction="column"
+      alignItems="center"
+      justifyContent="space-between"
+      sx={{ padding: 2, height: 300 }}
+    >
+      <Typography variant="h3">Why Choose Us?</Typography>
+      <Grid container>
         {svc}
-      </SvcContainer>
+      </Grid>
 
-    </ColContainer>
+    </Grid>
   );
 }
 

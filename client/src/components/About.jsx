@@ -8,17 +8,24 @@ function About() {
       id="about"
       sx={{
         display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        textAlign: 'right',
+        alignItems: 'center',
         height: '100vh',
         backgroundImage: "url('/background.jpg')",
         backgroundSize: 'cover',
-        paddingRight: '10%',
-        marginottom: '5vh',
+        paddingLeft: '10%',
       }}
     >
-      <Typography sx={{ textShadow: '0 0 3px #39C5FE, 0 0 5px #FFF' }}>welcome / short description</Typography>
+      <Box sx={{ width: '50%', color: '#FFF', textShadow: '0 0 20px #000, 0 0 40px #000' }}>
+        <Typography>
+          Hi, Im Phillip, and I am a Real Estate Investor and Property Manager in the San
+          Francisco and San Mateo county area. I majored in Business Economics at UCSB,
+          and am passionate about empowering people in real estate, business, and investing.
+        </Typography>
+        <Typography>
+          When I’m not running Phill Tsang Group, you can usually find me practicing Brasilian
+          Jiu Jitsu in my free time.
+        </Typography>
+      </Box>
     </Box>
   );
 }
