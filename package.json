@@ -1,5 +1,6 @@
 {
   "name": "brainStormLLC",
+  "homepage": "https://philltsang.com",
   "version": "1.0.0",
   "description": "Website for Phil",
   "main": "server/index.jsx",
@@ -7,7 +8,7 @@
     "start": "nodemon server",
     "clean": "rm dist/bundle.js",
     "build:dev": "webpack --mode development",
-    "build:prod": "webpack --mode production"
+    "build:prod": "webpack"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,6 @@
   "bugs": {
     "url": "https://github.com/theGuyNextDoor/brainStormLLC/issues"
   },
-  "homepage": "https://github.com/theGuyNextDoor/brainStormLLC#readme",
   "devDependencies": {
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",

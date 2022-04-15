@@ -1,5 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import headshot from '../../dist/images/headshot.jpeg';
+import background from '../../dist/images/background.jpg';
 
 function About() {
   return (
@@ -10,7 +12,7 @@ function About() {
         display: 'flex',
         // alignItems: 'center',
         height: '100vh',
-        backgroundImage: "url('images//background.jpg')",
+        backgroundImage: `url(${background})`,
         backgroundSize: 'cover',
         paddingLeft: '10%',
       }}
@@ -25,7 +27,9 @@ function About() {
           When I’m not running Phill Tsang Group, you can usually find me practicing Brasilian
           Jiu Jitsu in my free time.
         </Typography>
+        <Box component="img" src={headshot} alt="Logo" sx={{ width: 300, height: 400 }} />
       </Box>
+      <Box component="img" />
     </Box>
   );
 }

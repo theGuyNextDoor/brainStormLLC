@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Typography, Paper } from '@mui/material';
+import background from '../../dist/images/background_2.png';
 
 const questionsData = [
   'this is a dummy question 1?',
@@ -56,7 +57,7 @@ function QA() {
         padding: 2,
         height: 300,
         color: '#FFF',
-        backgroundImage: "url('/images/background_2.png')",
+        backgroundImage: `url(${background})`,
         backgroundSize: 'cover',
       }}
     >
