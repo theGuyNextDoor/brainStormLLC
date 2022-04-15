@@ -27,7 +27,7 @@ function About() {
           When I’m not running Phill Tsang Group, you can usually find me practicing Brasilian
           Jiu Jitsu in my free time.
         </Typography>
-        <Box component="img" src={headshot} alt="Logo" sx={{ width: 300, height: 400 }} />
+        <Box component="img" src={headshot} alt="Logo" sx={{ width: '50%', height: '60%' }} />
       </Box>
       <Box component="img" />
     </Box>
